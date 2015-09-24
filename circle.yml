@@ -1,0 +1,10 @@
+# circle.yml
+machine:
+  services:
+    - docker
+
+deployment:
+  release:
+    tag: /release_.*/
+    commands:
+      - echo $CIRCLE_BRANCH
