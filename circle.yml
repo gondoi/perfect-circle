@@ -3,6 +3,11 @@ machine:
   services:
     - docker
 
+test:
+  post:
+    - echo $CIRCLE_BRANCH
+
+
 deployment:
   release:
     tag: /release_.*/
