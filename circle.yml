@@ -10,6 +10,6 @@ test:
 
 deployment:
   release:
-    tag: /v[0-9]+(\.[0-9]+)*/
+    tag: v2.0.4
     commands:
       - echo $CIRCLE_BRANCH
