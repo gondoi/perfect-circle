@@ -5,7 +5,8 @@ machine:
 
 test:
   pre:
-    - [[ -n "${CIRCLE_BRANCH}" ]] && IMAGE_TAG="latest" || IMAGE_TAG="${CIRCLE_TAG}"
+    - |
+      [[ -n "${CIRCLE_BRANCH}" ]] && IMAGE_TAG="latest" || IMAGE_TAG="${CIRCLE_TAG}"
   post:
     - echo ${IMAGE_TAG}
 
