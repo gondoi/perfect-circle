@@ -4,11 +4,8 @@ machine:
     - docker
 
 test:
-  pre:
-    - |
-      [[ -n "${CIRCLE_BRANCH}" ]] && IMAGE_TAG="latest" || IMAGE_TAG="${CIRCLE_TAG}"
   post:
-    - echo ${IMAGE_TAG}
+    - ./docker_build.sh
 
 
 deployment:
